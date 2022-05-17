@@ -21,5 +21,18 @@ return a/b;
     }
 return {add,subtract,multiply,divide}
 }
+//convert to array
+function strToArr(string){
+return string.split("")
+}
+//check if char is punctuation
+function isPunctuation(char){
+if (char.charCodeAt(0)>=78 && char.charCodeAt(0)<=90) {
+    return false
+}
+else {
+    return true
+}
+}
 
-export { capitalize, reverseString,calculator}
+export { capitalize, reverseString,calculator,isPunctuation}
