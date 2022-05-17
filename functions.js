@@ -34,5 +34,14 @@ else {
     return true
 }
 }
+function shiftChar(code){
+return code+13;
+}
+function getCharCode(char){
+return char.charCodeAt(0)
+}
+function joinArr(arr){
+    return arr.join("")
+}
 
 export { capitalize, reverseString,calculator,isPunctuation}
