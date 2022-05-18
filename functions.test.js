@@ -1,4 +1,4 @@
-import { capitalize,reverseString,calculator } from "./functions";
+import { capitalize,reverseString,calculator,caesarCipher } from "./functions";
 
 test('capitalizes "test" to be "TEST"',()=>{
     expect(capitalize("test")).toBe("TEST")
@@ -21,4 +21,11 @@ test('divide one number by another',()=>{
     expect(calc.divide(81,9)).toBe(9)
 })
 })
-
+describe('uses ROT13 cipher to encrypt string',()=>{
+    test('convert YOU DID IT!',()=>{
+    expect(caesarCipher('YOU DID IT!')).toBe('LBH QVQ VG!')    
+    })
+    test('convert you did it!',()=>{
+        expect(caesarCipher('you did it!')).toBe('lbh qvq vg!')    
+        })
+})
