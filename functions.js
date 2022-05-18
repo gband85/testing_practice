@@ -34,8 +34,21 @@ else {
     return true
 }
 }
-function shiftChar(code){
-return code+13;
+function shiftArr(arr){
+return arr.map(function(x){
+        if (x>=65 && x<=90) {
+    if (x>77) {
+        return x-13;
+    }
+    else  {
+        return x+13;
+    }
+        }
+        else {
+            return x;
+        }
+    })
+
 }
 function getCharCode(char){
 return char.charCodeAt(0)
@@ -47,19 +60,7 @@ function joinArr(arr){
 function caesarCipher(string){
 let strArr=strToArr(string)
 let codeArr=strArr.map(x=>x.charCodeAt(0))
-let shiftedArr=codeArr.map(function(x){
-    if (x>=65 && x<=90) {
-if (x>77) {
-    return x-13;
-}
-else  {
-    return x+13;
-}
-    }
-    else {
-        return x;
-    }
-})
+let shiftedArr=shiftArr(codeArr)
 let newArr= shiftedArr.map(String.fromCharCode(x))
 return joinArr(newArr)
 }
