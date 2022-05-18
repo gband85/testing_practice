@@ -25,7 +25,10 @@ return {add,subtract,multiply,divide}
 function strToArr(string){
 return Array.from(string)
 }
-
+//convert array elements to corresponding character codes
+function convertArrChars(arr) {
+    arr.map(x=>x.charCodeAt(0))
+}
 function shiftArr(arr){
 return arr.map(function(x){
         if (x>=65 && x<=90) {
@@ -48,7 +51,7 @@ function joinArr(arr){
 
 function caesarCipher(string){
 let strArr=strToArr(string)
-let codeArr=strArr.map(x=>x.charCodeAt(0))
+let codeArr=convertArrChars(strArr)
 let shiftedArr=shiftArr(codeArr)
 let newArr= shiftedArr.map(String.fromCharCode(x))
 return joinArr(newArr)
