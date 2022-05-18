@@ -68,4 +68,18 @@ let newArr= convertArrCodes(shiftedArr)
 return joinArr(newArr)
 }
 
+function analyzeArray(array) {
+    let avg=array.reduce(function(prev,curr){
+      return curr+prev
+    },0)/array.length
+    let min=array.sort(function(a,b){
+      return a-b;
+    })[0]
+      let max=array.sort(function(a,b){
+      return a-b;
+    })[array.length-1]
+    let length=array.length
+    return {"average": avg,"min":min,"max":max,"length":length}
+  }
+
 export { capitalize, reverseString,calculator,caesarCipher}
