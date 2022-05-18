@@ -31,8 +31,8 @@ function convertArrChars(arr) {
 }
 function shiftArr(arr){
 return arr.map(function(x){
-        if (x>=65 && x<=90) {
-    if (x>77) {
+        if ((x>=65 && x<=90) || (x>=97 && x<=122)) {
+    if (x>77 || x>110) {
         return x-13;
     }
     else  {
@@ -46,7 +46,7 @@ return arr.map(function(x){
 
 }
 function convertArrCodes(arr) {
-   return arr.map(String.fromCharCode(x))
+   return arr.map(x=>String.fromCharCode(x))
 }
 function joinArr(arr){
     return arr.join("")
@@ -60,4 +60,4 @@ let newArr= convertArrCodes(shiftedArr)
 return joinArr(newArr)
 }
 
-export { capitalize, reverseString,calculator,isPunctuation}
+export { capitalize, reverseString,calculator,caesarCipher}
