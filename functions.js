@@ -25,15 +25,7 @@ return {add,subtract,multiply,divide}
 function strToArr(string){
 return Array.from(string)
 }
-//check if char is punctuation
-function isPunctuation(char){
-if (char.charCodeAt(0)>=78 && char.charCodeAt(0)<=90) {
-    return false
-}
-else {
-    return true
-}
-}
+
 function shiftArr(arr){
 return arr.map(function(x){
         if (x>=65 && x<=90) {
@@ -49,9 +41,6 @@ return arr.map(function(x){
         }
     })
 
-}
-function getCharCode(char){
-return char.charCodeAt(0)
 }
 function joinArr(arr){
     return arr.join("")
