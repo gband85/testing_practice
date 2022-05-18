@@ -27,7 +27,7 @@ return Array.from(string)
 }
 //convert array elements to corresponding character codes
 function convertArrChars(arr) {
-    arr.map(x=>x.charCodeAt(0))
+  return arr.map(x=>x.charCodeAt(0))
 }
 function shiftArr(arr){
 return arr.map(function(x){
@@ -45,6 +45,9 @@ return arr.map(function(x){
     })
 
 }
+function convertArrCodes(arr) {
+   return arr.map(String.fromCharCode(x))
+}
 function joinArr(arr){
     return arr.join("")
 }
@@ -53,7 +56,7 @@ function caesarCipher(string){
 let strArr=strToArr(string)
 let codeArr=convertArrChars(strArr)
 let shiftedArr=shiftArr(codeArr)
-let newArr= shiftedArr.map(String.fromCharCode(x))
+let newArr= convertArrCodes(shiftedArr)
 return joinArr(newArr)
 }
 
