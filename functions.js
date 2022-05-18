@@ -30,15 +30,23 @@ function convertArrChars(arr) {
   return arr.map(x=>x.charCodeAt(0))
 }
 function shiftArr(arr){
-return arr.map(function(x){
-        if ((x>=65 && x<=90) || (x>=97 && x<=122)) {
-    if (x>77 || x>110) {
+    return arr.map(function(x){
+        if ((x>=65 && x<=90)) {
+    if (x>77) {
         return x-13;
     }
     else  {
         return x+13;
     }
         }
+          else if (x>=97 && x<=122){
+            if (x>110) {
+              return x-13
+            }
+  else {
+    return x+13
+  }
+          }
         else {
             return x;
         }
