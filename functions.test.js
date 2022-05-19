@@ -34,8 +34,8 @@ describe('uses ROT13 cipher to encrypt string',()=>{
         expect(caesarCipher('you did it!')).toBe('lbh qvq vg!')    
         })
 })
-describe('function that takes an array and returns average, minimum, maximum, and length')
-test('test [1,8,3,4,2,6]',()=>{
+describe('function that takes an array and returns average, minimum, maximum, and length',()=>{
+    test('test [1,8,3,4,2,6]',()=>{
     expect(analyzeArray([1,8,3,4,2,6])).toEqual(
         {
               average: 4,
@@ -45,3 +45,5 @@ test('test [1,8,3,4,2,6]',()=>{
             }
     )
 })
+})
+
