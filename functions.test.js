@@ -1,11 +1,16 @@
-import { capitalize,reverseString,calculator,caesarCipher } from "./functions";
+import { capitalize,reverseString,calculator,caesarCipher,analyzeArray } from "./functions";
 
-test('capitalizes "test" to be "TEST"',()=>{
+describe('capitalize function',()=>{
+    test('capitalizes "test" to be "TEST"',()=>{
     expect(capitalize("test")).toBe("TEST")
 }) 
-test('reverses "The roof is on fire!" to be "!erif no si foor ehT"',()=>{
+})
+describe('reverseString function',()=>{
+    test('reverses "The roof is on fire!" to be "!erif no si foor ehT"',()=>{
     expect(reverseString("The roof is on fire!")).toBe("!erif no si foor ehT")
 })
+})
+
 describe('performs add,subtract,multiply,divide on two numbers',()=>{
     const calc=calculator()
 test('add two numbers',()=>{
@@ -28,4 +33,15 @@ describe('uses ROT13 cipher to encrypt string',()=>{
     test('convert you did it!',()=>{
         expect(caesarCipher('you did it!')).toBe('lbh qvq vg!')    
         })
+})
+describe('function that takes an array and returns average, minimum, maximum, and length')
+test('test [1,8,3,4,2,6]',()=>{
+    expect(analyzeArray([1,8,3,4,2,6])).toEqual(
+        {
+              average: 4,
+              min: 1,
+              max: 8,
+              length: 6
+            }
+    )
 })
