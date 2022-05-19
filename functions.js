@@ -82,4 +82,4 @@ function analyzeArray(array) {
     return {"average": avg,"min":min,"max":max,"length":length}
   }
 
-export { capitalize, reverseString,calculator,caesarCipher}
+export { capitalize, reverseString,calculator,caesarCipher,analyzeArray}
